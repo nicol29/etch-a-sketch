@@ -9,11 +9,10 @@ for(let i = 0; i < squaresAmount; i++){
 }
 
 let divsOnScreen = document.querySelectorAll(".grid-container div")
-console.log(divsOnScreen);
 
 gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
 
-
-
-
+divsOnScreen.forEach(grid => grid.addEventListener("mouseover", (e) => {
+    console.log(e);
+}));
