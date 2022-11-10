@@ -1,0 +1,10 @@
+.grid-container {
+    display: grid;
+    width: 400px; 
+    height: 400px;
+}
+
+
+.grid-container div {
+    border: .5px solid black;
+}
