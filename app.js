@@ -15,4 +15,5 @@ gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
 divsOnScreen.forEach(grid => grid.addEventListener("mouseover", (e) => {
     console.log(e);
+    grid.style.backgroundColor = "blue";
 }));
