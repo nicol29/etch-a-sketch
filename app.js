@@ -25,7 +25,7 @@ function createGrid(gridSize){
 
 
 submitButton.onclick = () => {
-    if(textBoxInput.value){
+    if(textBoxInput.value >= 16 && textBoxInput.value <= 100){
         let newGridSize = textBoxInput.value;
         gridSize = newGridSize;
         clearGrid();
