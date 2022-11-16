@@ -1,4 +1,4 @@
-let gridSize = 8;
+let gridSize = 16;
 let squaresAmount = gridSize * gridSize;
 
 const gridContainer = document.querySelector(".grid-container");
@@ -15,18 +15,13 @@ function createGrid(gridSize){
     }
 
     gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+
+    let divsOnScreen = document.querySelectorAll(".grid-container div")
+
+    divsOnScreen.forEach(grid => grid.addEventListener("mouseover", () => {
+        grid.style.backgroundColor = "black";
+    }));
 }
-
-
-createGrid(gridSize);
-
-let divsOnScreen = document.querySelectorAll(".grid-container div")
-
-divsOnScreen.forEach(grid => grid.addEventListener("mouseover", (e) => {
-    console.log(e);
-    grid.style.backgroundColor = "blue";
-    console.log(gridSize);
-}));
 
 
 submitButton.onclick = () => {
@@ -40,9 +35,13 @@ submitButton.onclick = () => {
 
 function clearGrid(){
     divsOnScreen = document.querySelectorAll(".grid-container div");
-    
+
     if(gridContainer.hasChildNodes()) {
         divsOnScreen.forEach(div => gridContainer.removeChild(div));
     }
+
     createGrid(gridSize);
 }
+
+
+createGrid(gridSize);
