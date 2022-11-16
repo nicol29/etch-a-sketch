@@ -4,11 +4,12 @@
     width: 750px;
     height: 550px;
     background-color: red;
+    padding-bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 90px;
     border: 2px solid black;
     filter: drop-shadow(5px 5px 5px black);
 }
@@ -22,7 +23,7 @@ h1 {
     font-family: Caveat;
     font-size: 60px;
     color: gold;
-    text-shadow: 0px 0 white, 0 0px white, 1px 0 white, 0 -1px white;
+    text-shadow: 0px 0 white, 0 0px white, 2px 0 white, 0 -1px white;
     margin-bottom: 20px;
     margin-top: 0px;
 }
@@ -36,10 +37,14 @@ h1 {
 
 .left-side,
 .right-side {
-    width: 90px;
+    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.left-side {
+    align-items: flex-end;
 }
 
 .grid-container {
@@ -47,4 +52,14 @@ h1 {
     width: 400px; 
     height: 400px;
     border: 1px solid black;
+}
+
+input {
+    width: 25px;
+    border-radius: 15px;
+}
+
+button {
+    background-color: yellow;
+    border-radius: 15px;
 }
