@@ -44,7 +44,9 @@ h1 {
 }
 
 .left-side {
-    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .grid-container {
@@ -59,7 +61,14 @@ input {
     border-radius: 15px;
 }
 
-button {
+form button {
     background-color: yellow;
     border-radius: 15px;
+}
+
+.rainbow {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    color: black;
+    font-style: italic;
+    border-radius: 10px;
 }
