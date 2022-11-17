@@ -21,7 +21,8 @@ function createGrid(gridSize){
 
     let divsOnScreen = document.querySelectorAll(".grid-container div")
 
-    divsOnScreen.forEach(grid => grid.addEventListener("mouseover", () => {
+    divsOnScreen.forEach(grid => grid.addEventListener("mouseover", (e) => {
+        console.log(e);
         if(isRainbowModeOn){
             grid.style.backgroundColor = genRandColour();
         } else{
